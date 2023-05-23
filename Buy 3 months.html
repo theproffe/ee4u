@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <head>
+        <!-- basic -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- mobile metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <!-- site metas -->
+        <title>EE IPTV 4U</title>
+        <link rel="icon" type="image/x-icon" href="images/favicon.png">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <!-- bootstrap css -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <!-- style css -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!-- Responsive-->
+        <link rel="stylesheet" href="css/responsive.css">
+        <!-- fevicon -->
+        <link rel="icon" href="images/fevicon.png" type="image/gif" />
+        <!-- Scrollbar Custom CSS -->
+        <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+        <!-- Tweaks for older IEs-->
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+        <!-- fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+        <!-- font awesome -->
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--  -->
+        <!-- owl stylesheets -->
+        <script src="script.js" type="module"></script>
+  
+        <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesoeet" href="css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+     </head>
+    <body>
+<!--
+Include Tailwind JIT CDN compiler
+More info: https://beyondco.de/blog/tailwind-jit-compiler-via-cdn
+-->
+
+<script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
+
+<!-- Snippet -->
+<section class="antialiased bg-gray-100 text-gray-600 min-h-screen p-4">
+    <div class="h-full"> 
+        <!-- Pay component -->
+        <div>
+            <!-- Card background -->
+            <div class="relative px-4 sm:px-6 lg:px-8 max-w-lg mx-auto">
+                <img class="rounded-t shadow-lg" src="images/banner-bg.png" width="480" height="300" alt="Pay background" />
+            </div>
+            <!-- Card body -->
+            <div class="relative px-4 sm:px-6 lg:px-8 pb-8 max-w-lg mx-auto" x-data="{ card: true }">
+                <div class="bg-white px-8 pb-6 rounded-b shadow-lg">
+
+                    <!-- Card header -->
+                    <div class="text-center mb-6">
+                        <div class="mb-2">
+                            <img class="-mt-8 inline-flex rounded-full" src="images/logo-toast.png" width="100" height="100" alt="User" />
+                        </div>
+                        <h1 class="text-xl leading-snug text-gray-800 font-semibold mb-2">3 months subscription 🔥</h1>
+                        <div class="text-sm">
+                            One year subscription with 24/7 support.
+                        </div>
+                    </div>
+
+                    <!-- Toggle -->
+                    <div class="flex justify-center mb-6">
+                        <div class="relative flex w-full p-1 bg-gray-50 rounded">
+                            <span class="absolute inset-0 m-1 pointer-events-none" aria-hidden="true">
+                            </span>
+                            <button class="relative flex-1 text-sm font-medium p-1 transition duration-150 ease-in-out focus:outline-none focus-visible:ring-2" @click.prevent="card = false">Pay With PayPal</button>
+                        </div>
+                    </div>
+                    <img class="rounded-t shadow-lg" src="images/3m.png" width="460" height="180" alt="Pay background" />
+
+                    
+                    
+               
+                    
+<br>
+                    <!-- PayPal form -->
+                    <div x-show="!card" x-cloak >
+                        <div>
+                          
+                        <!-- Specify a PayPal Shopping Cart Add to Cart button. -->
+        <!--a href="#" class="btn">Get Platinum</a-->
+        <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+         <!-- Identify your business so that you can collect the payments. -->
+         <input type="hidden" name="business" value="ezzeddineelfines@gmail.com">
+       
+         <!-- Specify a PayPal Shopping Cart Add to Cart button. -->
+         <input type="hidden" name="cmd" value="_cart">
+         <input type="hidden" name="add" value="1">
+       
+         <!-- Specify details about the item that buyers will purchase. -->
+         <input type="hidden" name="item_name"
+               value="Birthday - Cake and Candle">
+         <input type="hidden" name="amount" value="19.99">
+         <input type="hidden" name="currency_code" value="USD">
+       
+    
+         <input  type="image" name="submit"
+         src="images/buy.png" style="border-radius: 30px; padding: 5px;width: 60%;box-shadow: 7px 7px 15px -10px #380077, -4px -4px 13px #380077;"             alt="Add to Cart">
+         <img alt="" width="1" height="1"
+           src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+       </form>
+       <!-- Specify a PayPal Shopping Cart Add to Cart button. -->
+       <!-- Specify a PayPal Shopping Cart Add to Cart button. -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- More components -->
+<div x-show="open" class="fixed bottom-0 right-0 w-full md:bottom-8 md:right-12 md:w-auto z-60" x-data="{ open: true }">
+    <div class="bg-gray-800 text-gray-50 text-sm p-3 md:rounded shadow-lg flex justify-between">
+        <div>👉 <a class="hover:underline ml-1" href="https://wa.me/212637242197?text=Hello+EE+team+I want more information" target="_blank">You can contact us from here</a></div>
+        <button class="text-gray-500 hover:text-gray-400 ml-5" @click="open = false">
+            <span class="sr-only">Close</span>
+            <svg class="w-4 h-4 flex-shrink-0 fill-current" viewBox="0 0 16 16">
+                <path d="M12.72 3.293a1 1 0 00-1.415 0L8.012 6.586 4.72 3.293a1 1 0 00-1.414 1.414L6.598 8l-3.293 3.293a1 1 0 101.414 1.414l3.293-3.293 3.293 3.293a1 1 0 001.414-1.414L9.426 8l3.293-3.293a1 1 0 000-1.414z" />
+            </svg>
+        </button>
+    </div>
+</div>
+
+
+
+
+<style>
+    section {
+  font-family: 'Inter', sans-serif;
+}
+</style>
+
+
+
+
+
+
+</body>
+</html>
